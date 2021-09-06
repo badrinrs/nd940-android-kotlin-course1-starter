@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_margin="@dimen/layout_margin"
+            android:id="@id/shoe_name_layout"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shoe_name"
+                android:layout_weight="33"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{shoe.name}"
+                android:id="@+id/shoe_name"
+                android:layout_weight="67"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shoe_name_layout"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_margin="@dimen/layout_margin"
+            android:id="@id/shoe_company_layout"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shoe_company"
+                android:layout_weight="33"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{shoe.company}"
+                android:layout_margin="@dimen/layout_margin"
+                android:id="@+id/shoe_company"
+                android:layout_weight="67"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shoe_company_layout"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_margin="@dimen/layout_margin"
+            android:id="@id/shoe_size_layout"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shoe_size"
+                android:layout_weight="33"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{Double.toString(shoe.size)}"
+                android:layout_margin="@dimen/layout_margin"
+                android:id="@+id/shoe_size"
+                android:layout_weight="67"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shoe_size_layout"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_margin="@dimen/layout_margin"
+            android:id="@id/shoe_description_layout"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shoe_description"
+                android:layout_weight="33"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{shoe.description}"
+                android:layout_margin="@dimen/layout_margin"
+                android:id="@+id/shoe_description"
+                android:layout_weight="67"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

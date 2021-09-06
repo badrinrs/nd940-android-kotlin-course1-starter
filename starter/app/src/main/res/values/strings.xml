@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <string name="email_address">Email Address</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="let_s_get_started">Let\'s Get Started!</string>
+    <string name="welcome_to_shoe_inventory_app">Welcome to Shoe Inventory App</string>
+    <string name="welcome_description">Press the below button for instructions. This will provide more information on how to use the app and how to get inventory for different shoes.</string>
+    <string name="instructions">Instructions</string>
+    <string name="shoe_inventory_description">The Inventory would show a list of shoes. Also, you could tap on `See Details` button to see the detail for each shoe.</string>
+    <string name="see_shoe_list">See Shoe List</string>
+    <string name="see_shoe_detail">See Shoe Detail</string>
+    <string name="password">Password</string>
+    <string name="welcome">Welcome</string>
+    <string name="instruction">Instruction</string>
+    <string name="shoe_list">Shoe List</string>
+    <string name="logout">Logout</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="shoe_company">Shoe Company</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="shoe_description">Shoe Description</string>
+    <string name="save">Save</string>
+    <string name="shoe_detail">Shoe Detail</string>
 </resources>
