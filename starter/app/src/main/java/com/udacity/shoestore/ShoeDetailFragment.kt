@@ -21,8 +21,6 @@ class ShoeDetailFragment : Fragment() {
     private val binding: FragmentShoeDetailBinding
         get() = _binding!!
 
-//    private lateinit var shoeViewModel: ShoeViewModel
-//    private lateinit var shoeViewModelFactory: ShoeViewModelFactory
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -33,18 +31,17 @@ class ShoeDetailFragment : Fragment() {
         binding.cancelButton.setOnClickListener {
             findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment(args.shoes))
         }
-
+        binding.shoe = Shoe()
         binding.saveButton.setOnClickListener {
-            val shoeNameText = binding.shoeNameEditText.text.toString()
-            val shoeCompanyText = binding.shoeCompanyEditText.text.toString()
-            val shoeSizeText = binding.shoeSizeEditText.text.toString()
-            val shoeDescriptionText = binding.shoeDescriptionEditText.text.toString()
-            val shoe = Shoe(shoeNameText, shoeSizeText.toDouble(), shoeCompanyText, shoeDescriptionText)
+            val shoe = binding.shoe
             var shoes = args.shoes
             if(shoes == null) {
                 shoes = Shoes()
             }
-            shoes.add(shoe)
+            shoe?.let {
+                shoes.add(shoe)
+            }
+
             val action = ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment(shoes)
             findNavController().navigate(action)
         }

@@ -34,7 +34,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{shoe.name}"
+                android:text="@={shoe.name}"
                 android:id="@+id/shoe_name"
                 android:layout_weight="67"
                 android:layout_gravity="center"/>
@@ -62,7 +62,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{shoe.company}"
+                android:text="@={shoe.company}"
                 android:layout_margin="@dimen/layout_margin"
                 android:id="@+id/shoe_company"
                 android:layout_weight="67"
@@ -93,7 +93,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{Double.toString(shoe.size)}"
+                android:text="@={``+shoe.size}"
                 android:layout_margin="@dimen/layout_margin"
                 android:id="@+id/shoe_size"
                 android:layout_weight="67"
@@ -123,7 +123,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{shoe.description}"
+                android:text="@={shoe.description}"
                 android:layout_margin="@dimen/layout_margin"
                 android:id="@+id/shoe_description"
                 android:layout_weight="67"
